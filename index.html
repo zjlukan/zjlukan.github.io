@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!-- make compatible for edge/internet explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- how wide is the viewport -->
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- link to css file -->
+    <script src="https://kit.fontawesome.com/ce0b75ba28.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header"> <!-- background image and other stuff -->
+    <div class="container">
+        <nav>
+            <div class="sidemenu-wrap" id="sidemenu-wrap">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#" class="menu-close" onclick="closemenu(); return false;">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </div>
+            <a href="#" class="menu-toggle" onclick="openmenu(); return false;">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+        <div class="header-text"> <!-- text under the logo -->
+            <p>Student</p>
+            <h1>Hi, I'm <span>Zachary Lukan</span><br>I'm a student</h1> <!-- br is break line, use span to add color or properies to subtext -->
+        </div>
+    </div>
+</div>
+<!-- ---------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <h1 class="sub-title">About me</h1> 
+                <p>I'm a student
+                    I'm a student
+                    I'm a student
+                    I'm a student
+                    I'm a student
+                </p>
+                <a href="images/002.jpg" download class="btn btn2 cv-btn">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a> <!--download attached file when btn clicked-->
+            </div>
+            <div class="about-col-2">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p> <!-- pass the name-->
+                    <p class="tab-links" onclick="opentab('leadership')">Leadership</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <div class="education-item">
+                        <img src="images/cG5n.png">
+                        <h2>Major Mathematics and Computer Science (B. Sc.)</h2>
+                        <p>
+                            McGill University<br>
+                            Graduating class of 2029
+                        </p>
+                    </div>
+                </div>
+                <div class="tab-contents" id="leadership">
+                    <div class="leadership-grid"> <!-- new wrapper to lay the two cards side by side -->
+                        <div class="leadership-item">
+                            <img src="images/Screenshot 2025-02-26 112320_USE.png">
+                            <h2>Canadian CanSat Launch Campaign</h2>
+                            <h3>Lead of Software Development</h3>
+                            <p>Collaborated with team to design and manufacture a compact FPV drone capable of withstanding XX G force and self-stabilize, connected to VR headset, won technical design award. Developed using C++ a system to report air pressure, position, and force to the ground station with a range of XX km. Presented data to panel of judges, reached over 1 million users online.</p>
+                        </div>
+                        <div class="leadership-item">
+                            <img src="images/Screenshot 2025-02-26 112320_USE.png">
+                            <h2>University of British Columbia Physics Olympics</h2>
+                            <h3>Team Lead</h3>
+                            <p>Led a team of developers and engineers to win against 80 teams by over XX percent/points. Directed competition teams of 7-10 members by managing team meetings and overseeing multiple engineering projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------skills------------------>
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">Skills</h1>
+        <div class="skills-list">
+            <div>
+                <i class="fa-solid fa-book skills-icon"></i>
+                <h2>Coursework</h2>
+                <p>Data Structures & Algorithms, Computer Systems, Discrete Mathematics</p>
+                <button id="openBtn">View More <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div>
+                <i class="fa-regular fa-file-code skills-icon"></i>
+                <h2>General</h2>
+                <p>Java, Python, C/C++
+                    Github, Docker, FastAPI, Google Colab
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-eye skills-icon"></i>
+                <h2>Computer Vision</h2>
+                <p>OpenCV, Convolutional Neural Networks</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-brain skills-icon"></i>
+                <h2>Machine Learning</h2>
+                <p>Bayesian Optimization, PyTorch, Scikit-learn</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-globe skills-icon"></i>
+                <h2>Web Technologies</h2>
+                <p>HTML5, CSS, FastAPI, NiceGUI</p>
+            </div>
+            <div>
+                <h2>Computer Vision</h2>
+                <p>skills-listskills-listskills-listskills-listskills-list</p>
+            </div>
+            <dialog id="courses-dialog">
+                <button id="closeBtn"><i class="fa-solid fa-x"></i></button>
+                <h2>Coursework</h2>
+                <ul class="course-list">
+                    <li><i class="fa-solid fa-circle-check"></i> Data Structures & Algorithms</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Programming Language Design & Formal Semantics</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Multivariate Calculus</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Algorithmic Problem Solving</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Computer Systems</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Discrete Mathematics</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Object-Oriented Programming in Java</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Linear Algebra</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Software Systems</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Statistics and Probability</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Abstract Algebra</li>
+                </ul>
+            </dialog>
+        </div>
+    </div>
+</div>
+<!-----------------portfolio------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <img src="images/graph.png">
+                <div class="project-content">
+                    <h2>CNNs</h2>
+                    <p>Engineered a real-time facial emotion recognition system using OpenCV-based face tracking and a PyTorch CNN, transforming live video streams into emotion classifications with XX% accuracy and ZZ fps.
+                        Developed and deployed a production-ready ML application stack with FastAPI, Docker, and NiceGUI, exposing model inference through an interactive web interface accessible from any device.
+                        Increased model performance through Bayesian hyperparameter optimization using Ax, automating experimentation across training configurations and accelerating convergence resulting in a YY% increase in performance.</p>
+                    <a href="https://github.com/zjlukan/Facial-Tracking-and-Emotion-Recognition-Using-Neural-Networks"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                </div>
+            </div>
+            <div>
+                <img src="images/books.png">
+                <div class="project-content">
+                    <h2>Pano Stitcher</h2>
+                    <p>Integrated a backend using Django, processed and stitched together images using feature matching and Gaussian blending, and designed a frontend UI with HTML and JavaScript communicating to the backend via REST calls.</p>
+                    <a href="https://github.com/zjlukan/Panorama-stitcher"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------------------------contact------------------------------------------------ -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left"> <!--left col-->
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="social-links">
+                    <p><i class="fa-solid fa-envelope"></i> zachary.lukan@mail.mcgill.ca</p>
+                    <p><i class="fa-solid fa-envelope"></i> zboylukan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 604-375-9224</p>
+                    <a href="https://www.linkedin.com/in/zachary-lukan-b32850379/">
+                        <i class="fa-brands fa-linkedin"></i> Linkedin
+                    </a>
+                    <a href="https://github.com/zjlukan">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="contact-right"> <!--left col--> 
+                <form name="submit-to-google-sheet">
+                    <fieldset>
+                        <legend>Name</legend>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Mail</legend>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Message</legend>
+                        <textarea name="Message" rows="6" placeholder="Write a message"></textarea>
+                    </fieldset>
+                    <button type="submit" class="btn btn2">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form> 
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© zjlukan.github.io. All rights reserved</p>
+    </div>
+ </div>
+
+<!-- javascript 🤮🤮🤮🤮-->
+<script> 
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tl of tablinks){
+            tl.classList.remove("active-link") //hide all the colored underlines when one tab link is clicked
+        }
+        for(tc of tabcontents){
+            tc.classList.remove("active-tab") //hide all the tab descriptions
+        }
+        event.currentTarget.classList.add("active-link") //when the tab link is clicked, display the active link (underline)
+        document.getElementById(tabname).classList.add("active-tab") //fetch the name of the tab link that was clicked, display its active tab
+
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu-wrap"); // was "sidemenu" - that's the inner ul, not the sliding panel
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+
+</script>
+
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbyYPBHHLY4sfSFgcJ_eGzY8hpxDrQRToeLtKbq-Rs6941fDdJVx1lxw-3IXzA2kvLgtMg/exec'
+	const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => {
+                msg.innerHTML = "Message sent succesfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            }
+            )
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
+
+<script>
+  const dialog = document.getElementById('courses-dialog');
+  document.getElementById('openBtn').addEventListener('click', () => {
+    dialog.showModal();
+  });
+  document.getElementById('closeBtn').addEventListener('click', () => {
+    dialog.close();
+  });
+</script>
+<script>
+    feather.replace();
+</script>
+
+</body>
+</html>
