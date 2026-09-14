@@ -246,7 +246,9 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .skills-list div{ /*background of the skills blocks*/
