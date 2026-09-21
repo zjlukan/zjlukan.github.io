@@ -107,6 +107,35 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 15px; /* make curved corners */
 }
+.about-col-1 p{
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+.about-col-1 .about-lead{
+    color: #d6d6d6; /* slightly brighter so the intro stands out */
+    font-size: 15px;
+}
+.about-status{
+    border-left: 3px solid #fdc461;
+    padding-left: 16px;
+}
+.about-status a{
+    color: #fdc461;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+}
+.about-status a:hover{
+    border-bottom-color: #fdc461;
+}
+.work-auth{
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #8a8a8a;
+}
 .about-col-2{
     flex-basis: 60%; /*leave some space in middle*/
 } 
