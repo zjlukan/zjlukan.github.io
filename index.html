@@ -39,13 +39,18 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <h1 class="sub-title">About me</h1> 
-                <p>I'm a student
-                    I'm a student
-                    I'm a student
-                    I'm a student
-                    I'm a student
+                <h1 class="sub-title">About me</h1>
+                <p class="about-lead">
+                    I'm a student at McGill university pursing a degree in mathematics and computer science. I'm interested in all the ways that 
+                    computers have become a vehicle for the applications of mathematics to solve complex problems. My areas of expertise are computer vision,
+                    algorithms, and computational mathematics.
                 </p>
+                <p class="about-status">
+                    I'm currently looking for internship roles. Reach me at
+                    <a href="mailto:zachary.lukan@mail.mcgill.ca">zachary.lukan@mail.mcgill.ca</a>.
+                    <span class="work-auth">Authorized to work in Canada and the US without sponsorship</span>
+                </p>
+                <p>Outside of classes and side projects, I design origami and read.</p>
                 <a href="resumev1_revised.pdf" download class="btn btn2 cv-btn">
                     <i class="fa-solid fa-download"></i> Download Resume
                 </a> <!--download attached file when btn clicked-->
@@ -150,10 +155,10 @@
             <div>
                 <img src="images/graph.png">
                 <div class="project-content">
-                    <h2>CNNs</h2>
-                    <p>Engineered a real-time facial emotion recognition system using OpenCV-based face tracking and a PyTorch CNN, transforming live video streams into emotion classifications with XX% accuracy and ZZ fps.
-                        Developed and deployed a production-ready ML application stack with FastAPI, Docker, and NiceGUI, exposing model inference through an interactive web interface accessible from any device.
-                        Increased model performance through Bayesian hyperparameter optimization using Ax, automating experimentation across training configurations and accelerating convergence resulting in a YY% increase in performance.</p>
+                    <h2>Emotion Recognition Using Convolutional Neural Networks</h2>
+                    <p>A real-time tracking and classification application using transfer learning on the MobileNetV2 CNN model.
+                        The repo includes a training module where users can utilize parameter optimization techniques to train a classifier model.
+                    </p>
                     <a href="https://github.com/zjlukan/Facial-Tracking-and-Emotion-Recognition-Using-Neural-Networks"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                 </div>
             </div>
@@ -161,7 +166,9 @@
                 <img src="images/books.png">
                 <div class="project-content">
                     <h2>Pano Stitcher</h2>
-                    <p>Integrated a backend using Django, processed and stitched together images using feature matching and Gaussian blending, and designed a frontend UI with HTML and JavaScript communicating to the backend via REST calls.</p>
+                    <p>A browser-based panorama stitcher built with OpenCV, based on Brown &amp; Lowe's seminal paper. 
+                        Upload photos in any order and get a seamlessly blended panorama with quality within XX% of state-of-the-art applications.
+                    </p>
                     <a href="https://github.com/zjlukan/Panorama-stitcher"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                 </div>
             </div>
